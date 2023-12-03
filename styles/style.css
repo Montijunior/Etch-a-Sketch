@@ -4,3 +4,188 @@
     box-sizing: border-box;
     font-family: serif;
 }
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main-container {
+    width: 90%;
+    height: 600px;
+    /* border: 2px solid brown; for debugging */
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.sketch-container {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+    background-color: white;
+    box-shadow: 0 0 20px black;
+}
+.etch-title,.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: brown;
+    font-weight: 700;
+    font-family: monospace;
+}
+
+.colors-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px black;
+
+}
+
+.form {
+    width: 100%;
+}
+.form form {
+    width: 100%;
+}
+
+form input {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid gray;
+}
+input[placeholder] {
+    font-size: 25px;
+    font-family: monospace;
+}
+form button {
+    padding: 10px;
+    font-size: 25px;
+    margin: -2px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+/* colors container */ 
+.colors {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+}
+.colorBoxes {
+    height: 50px;
+    width: 50px;
+    /* background-color: pink; */
+    margin: 1px;
+    cursor: pointer;
+}
+.colors .color {
+    font-size: 25px;
+    font-family: monospace;
+    text-align: center;
+    margin-bottom: 10px;
+    color: gray;
+    font-weight: 600;
+}
+.colorValues {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.black {
+    background-color: black;
+}
+.blue {
+    background-color: blue;
+}
+.red {
+    background-color: red;
+}
+.violet {
+    background-color: violet;
+}
+.yellow {
+    background-color: yellow;
+}
+.random-color {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.random {
+    width: 50%;
+    margin: 5px auto;
+    align-self: center;
+    padding: 10px;
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.clear-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clear-container button {
+    width: 50%;
+    margin: 5px auto;
+    align-self: center;
+    padding: 10px;
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    
+}
+
+/* media query */
+
+@media screen and (max-width :768px) {
+    body {
+        width: 100%;
+        min-height: 100vh;
+    }
+    .main-container {
+        width: 100%;
+        height: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        
+    }
+    .color-container {
+        order: 2;
+    }
+    
+}
