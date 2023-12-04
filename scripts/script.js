@@ -2,10 +2,17 @@ let sketchContainer = document.querySelector('.sketch-container');
 let randomColor = document.querySelector('.random');
 let clearBtn = document.querySelector('.clear');
 let colors = document.querySelector('.colorValues');
-let inputBtn = document.querySelector('.input');
+let inputBtn = document.querySelector('input');
+
 let submitBtn = document.querySelector('.submit');
 let title = document.querySelector('.title');
+let form = document.querySelector('form');
 
+
+form.addEventListener('click',(e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+});
 
 //by default sketchContainer has default 16 X 16 grid items
 for (let i = 0; i < 257; i++) {
@@ -29,6 +36,20 @@ function getRainBow() {
         target.style.backgroundColor = backgroundClr;
     });
 }
+
+colors.addEventListener('click',(e)=>{
+    let colorTarget = e.target;
+    let background = e.target.getAttribute('data-color');
+    // console.log(background);
+    sketchContainer.addEventListener('click',(e)=>{
+        let divTarget = e.target;
+        divTarget.style.backgroundColor = background;
+        
+    });
+});
+
+
+
 
 
 
