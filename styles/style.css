@@ -35,6 +35,9 @@ body {
     background-color: white;
     box-shadow: 0 0 20px black;
 }
+#erase {
+    background-color: darkred;
+}
 .etch-title,.title {
     text-align: center;
     font-size: 30px;
@@ -149,10 +152,10 @@ form button {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .clear-container button {
-    width: 50%;
+    width: 40%;
     margin: 5px auto;
     align-self: center;
     padding: 10px;
@@ -166,6 +169,7 @@ form button {
     border: none;
     
 }
+
 
 /* media query */
 

@@ -3,6 +3,7 @@ let randomColor = document.querySelector('.random');
 let clearBtn = document.querySelector('.clear');
 let colors = document.querySelector('.colorValues');
 let inputBtn = document.querySelector('input');
+let eraseBtn = document.querySelector('.erase');
 
 let submitBtn = document.querySelector('.submit');
 let title = document.querySelector('.title');
@@ -15,11 +16,14 @@ form.addEventListener('click',(e)=>{
 });
 
 //by default sketchContainer has default 16 X 16 grid items
-for (let i = 0; i < 257; i++) {
-    let sketchItems = document.createElement('div');
-    sketchItems.classList.add('sketch-item');
-    sketchContainer.appendChild(sketchItems);
+function getDefault(){
+    for (let i = 0; i < 257; i++) {
+        let sketchItems = document.createElement('div');
+        sketchItems.classList.add('sketch-item');
+        sketchContainer.appendChild(sketchItems);
+    }
 }
+getDefault();
 
 //function: generates a random color
 function getRandomColor(number) {
@@ -30,7 +34,7 @@ function getRandomColor(number) {
 randomColor.addEventListener('click',getRainBow);
 
 function getRainBow() {
-    sketchContainer.addEventListener('mouseover',(e)=>{
+    sketchContainer.addEventListener('click',(e)=>{
         let target = e.target;
         let backgroundClr = `rgb(${getRandomColor(255)},${getRandomColor(255)},${getRandomColor(255)})`;
         target.style.backgroundColor = backgroundClr;
@@ -49,6 +53,14 @@ colors.addEventListener('click',(e)=>{
 });
 
 //clear function
+
+
+eraseBtn.addEventListener('click',()=>{
+    sketchContainer.addEventListener('click',(e)=>{
+        let target = e.target;
+        target.style.backgroundColor = 'white';
+    });
+});
 
 
 
