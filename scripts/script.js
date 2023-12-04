@@ -48,6 +48,8 @@ colors.addEventListener('click',(e)=>{
     });
 });
 
+//clear function
+
 
 
 
