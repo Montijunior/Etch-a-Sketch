@@ -15,7 +15,7 @@ form.addEventListener('click',(e)=>{
     e.stopPropagation();
 });
 
-let inputValue = input.value;
+// let inputValue = input.value;
 
 //by default sketchContainer has default 16 X 16 grid items
 inputBtn.addEventListener('change',gridValue);
