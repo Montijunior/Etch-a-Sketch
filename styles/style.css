@@ -68,7 +68,7 @@ body {
 }
 
 form input {
-    width: 65%;
+    width: 100%;
     padding: 10px;
     border: 1px solid gray;
 }

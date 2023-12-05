@@ -5,7 +5,7 @@ let colors = document.querySelector('.colorValues');
 let inputBtn = document.querySelector('input');
 let eraseBtn = document.querySelector('.erase');
 
-let submitBtn = document.querySelector('.submit');
+let inputTitle = document.querySelector('.inputTitle');
 let title = document.querySelector('.title');
 let form = document.querySelector('form');
 
@@ -15,10 +15,15 @@ form.addEventListener('click',(e)=>{
     e.stopPropagation();
 });
 
+let inputValue = input.value;
+
 //by default sketchContainer has default 16 X 16 grid items
-submitBtn.addEventListener('click',gridValue);
+inputBtn.addEventListener('change',gridValue);
+
+
 function gridValue(){
-    let inputValue = input.value;
+    inputValue = input.value;
+    inputTitle.innerText = `${inputValue} X ${inputValue} grid`;
     input.focus();
     // console.log(inputValue);
     for (let i = 0; i < inputValue * inputValue; i++) {
