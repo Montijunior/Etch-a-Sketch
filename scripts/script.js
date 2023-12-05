@@ -16,14 +16,19 @@ form.addEventListener('click',(e)=>{
 });
 
 //by default sketchContainer has default 16 X 16 grid items
-function getDefault(){
-    for (let i = 0; i < 257; i++) {
+submitBtn.addEventListener('click',gridValue);
+function gridValue(){
+    let inputValue = input.value;
+    input.focus();
+    // console.log(inputValue);
+    for (let i = 0; i < inputValue * inputValue; i++) {
         let sketchItems = document.createElement('div');
         sketchItems.classList.add('sketch-item');
         sketchContainer.appendChild(sketchItems);
+        sketchContainer.style.gridTemplateColumns = `repeat(${inputValue},1fr)`;
+        sketchContainer.style.gridTemplateRows = `repeat(${inputValue},1fr)`;
     }
 }
-getDefault();
 
 //function: generates a random color
 function getRandomColor(number) {
@@ -53,6 +58,12 @@ colors.addEventListener('click',(e)=>{
 });
 
 //clear function
+clearBtn.addEventListener('click',clearPage);
+function clearPage(){
+    document.body.addEventListener('load',()=>{
+        console.log('document loaded');
+    })
+}
 
 
 eraseBtn.addEventListener('click',()=>{

@@ -30,8 +30,8 @@ body {
     width: 500px;
     height: 500px;
     display: grid;
-    grid-template-columns: repeat(16,1fr);
-    grid-template-rows: repeat(16,1fr);
+    /* grid-template-columns: repeat(16,1fr); */
+    /* grid-template-rows: repeat(16,1fr); */
     background-color: white;
     box-shadow: 0 0 20px black;
 }
